@@ -1,0 +1,2491 @@
+{
+	"info": {
+		"_postman_id": "0b10ca62-aa34-482e-89f6-69647a9b5928",
+		"name": "Food Order Student",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11794285",
+		"_collection_link": "https://restoo7.postman.co/workspace/Team-Workspace~5ce758ac-104f-40f7-8907-3c557d38a47d/collection/11794285-0b10ca62-aa34-482e-89f6-69647a9b5928?action=share&creator=11794285&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "1.Auth",
+					"item": [
+						{
+							"name": "Login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "admin@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/user/login",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"login"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "2. City",
+					"item": [
+						{
+							"name": "All",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{adminToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/city/all",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"city",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Single",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{adminToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6443ccf8f1073ee8d839e87c",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/city/single",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"city",
+										"single"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{adminToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "Jalandhar",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/city/add",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"city",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{adminToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6443ccf8f1073ee8d839e87c",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "true",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Jalandhar2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/city/update",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"city",
+										"update"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "3. Ingredient",
+					"item": [
+						{
+							"name": "All",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{adminToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/ingredient/all",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"ingredient",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Single",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{adminToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6443ca207db7212b85a1db35",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/ingredient/single",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"ingredient",
+										"single"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{adminToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Jeera",
+											"type": "text"
+										},
+										{
+											"key": "ingredient_image",
+											"type": "file",
+											"src": "/C:/Users/DELL/Desktop/0 ZEPJsASfB2z7hi_0.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/ingredient/add",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"ingredient",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{adminToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "_id",
+											"value": "6443ca207db7212b85a1db35",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "false",
+											"type": "text"
+										},
+										{
+											"key": "category_image",
+											"type": "file",
+											"src": [],
+											"disabled": true
+										},
+										{
+											"key": "name",
+											"value": "JEERU",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/ingredient/update",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"ingredient",
+										"update"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "4. Category",
+					"item": [
+						{
+							"name": "All",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{adminToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/category/all",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"category",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Single",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{adminToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6443939db1ee2100bc572474",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/category/single",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"category",
+										"single"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{adminToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Fast Food",
+											"type": "text"
+										},
+										{
+											"key": "category_image",
+											"type": "file",
+											"src": "/C:/Users/DELL/Desktop/0 ZEPJsASfB2z7hi_0.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/category/add",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"category",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{adminToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "_id",
+											"value": "6443939db1ee2100bc572474",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "false",
+											"type": "text"
+										},
+										{
+											"key": "category_image",
+											"type": "file",
+											"src": []
+										},
+										{
+											"key": "name",
+											"value": "Foody",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/category/update",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"category",
+										"update"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "4. Sub Category",
+					"item": [
+						{
+							"name": "All",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{adminToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/subcategory/all",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"subcategory",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Single",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{adminToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "644393f2b1ee2100bc57247e",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/subcategory/single",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"subcategory",
+										"single"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{adminToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Women",
+											"type": "text"
+										},
+										{
+											"key": "subcategory_image",
+											"type": "file",
+											"src": "/C:/Users/DELL/Downloads/photo.jpg"
+										},
+										{
+											"key": "categoryId",
+											"value": "6443939db1ee2100bc572474",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/subcategory/add",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"subcategory",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{adminToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "_id",
+											"value": "644393f2b1ee2100bc57247e",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "true",
+											"type": "text"
+										},
+										{
+											"key": "subcategory_image",
+											"type": "file",
+											"src": []
+										},
+										{
+											"key": "name",
+											"value": "Rings",
+											"type": "text"
+										},
+										{
+											"key": "categoryId",
+											"value": "6443939db1ee2100bc572474",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/subcategory/update",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"subcategory",
+										"update"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "5. Rest Infomation",
+					"item": [
+						{
+							"name": "Add Rest Information",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"pm.test(\"Response time is less than 400ms\", function (){",
+											"    pm.expect(pm.response.responseTime).to.be.below(400);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{adminToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "detail",
+											"value": "Tandoori Bite is Bite your Date Now",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Tandoori Bite",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "9988776655",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "Jalandhar",
+											"type": "text"
+										},
+										{
+											"key": "cityId",
+											"value": "6443ccf8f1073ee8d839e87c",
+											"type": "text"
+										},
+										{
+											"key": "userId",
+											"value": "644754e50653c8a4c2c39e66",
+											"type": "text"
+										},
+										{
+											"key": "rest_image",
+											"type": "file",
+											"src": "/C:/Users/DELL/Desktop/0 ZEPJsASfB2z7hi_0.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/rest/add",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"rest",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "All",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{restToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/rest/all",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"rest",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "All Rest Owners",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{restToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "userType",
+											"value": "3",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/user/all",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "All Approved / Pending / Rejected",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{restToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "isApproved",
+											"value": "true",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "isRejected",
+											"value": "true",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "isUsed",
+											"value": "false",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/rest/all",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"rest",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Single",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{restToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "64474e1defa68971c8b2ea94",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/rest/single",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"rest",
+										"single"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Approve/Reject Rest",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{restToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "64474e1defa68971c8b2ea94",
+											"type": "text"
+										},
+										{
+											"key": "isApproved",
+											"value": "true",
+											"type": "text"
+										},
+										{
+											"key": "isRejected",
+											"value": "false",
+											"type": "text"
+										},
+										{
+											"key": "approvalMsg",
+											"value": "You are Allow to Work With FOOD",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/rest/action",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"rest",
+										"action"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "6. Product",
+					"item": [
+						{
+							"name": "All",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{adminToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/product/all",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"product",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Single",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{adminToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6447a7bb484a1a9203609ae0",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/product/single",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"product",
+										"single"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{adminToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Product 3",
+											"type": "text"
+										},
+										{
+											"key": "product_image",
+											"type": "file",
+											"src": "/C:/Users/Dell Optiplex/Desktop/images/product.jpg"
+										},
+										{
+											"key": "categoryId",
+											"value": "6443939db1ee2100bc572474",
+											"type": "text"
+										},
+										{
+											"key": "subcategoryId",
+											"value": "644393f2b1ee2100bc57247e",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "15000",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/product/add",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"product",
+										"add"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "7. Customers",
+					"item": [
+						{
+							"name": "All",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{adminToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "userType",
+											"value": "2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/user/all",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Single",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{adminToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6448a6de17a841262ccbeaf0",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/user/single",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"single"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{adminToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6448a6de17a841262ccbeaf0",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "true",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Customer 2",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "customer1@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/user/update",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"update"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "8. Dashboard",
+					"item": [
+						{
+							"name": "get dashboard",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{adminToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/dashboard",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"dashboard"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "9.Orders",
+					"item": [
+						{
+							"name": "All",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{adminToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/order/all",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"order",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Single",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{adminToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "626a22f6944654394c0c58e9",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/order/single",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"order",
+										"single"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{adminToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6274cb23b441c37fa6c33267",
+											"type": "text"
+										},
+										{
+											"key": "orderStatus",
+											"value": "3",
+											"description": " 1-> Placed , 2-> Confirmed , 3=> Shipped , 4=>Delivered , 5=> Cancelled\n",
+											"type": "text"
+										},
+										{
+											"key": "shipmentUrl",
+											"value": "xyz.com",
+											"description": "//optional",
+											"type": "text"
+										},
+										{
+											"key": "trackingId",
+											"value": "32561",
+											"description": "//optional",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/order/update",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"order",
+										"update"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "1.Auth",
+					"item": [
+						{
+							"name": "Login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "customer1@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/cust/user/login",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"cust",
+										"user",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Register",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "customer1@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Customer 1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/cust/user/addcus",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"cust",
+										"user",
+										"addcus"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Profile",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{customerToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6448a6de17a841262ccbeaf0",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/user/single",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"single"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "2. Category",
+					"item": [
+						{
+							"name": "All",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{baseUrl}}/cust/category/all",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"cust",
+										"category",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Single",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6443939db1ee2100bc572474",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/cust/category/single",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"cust",
+										"category",
+										"single"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "3. Sub Category",
+					"item": [
+						{
+							"name": "All",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{baseUrl}}/cust/subcategory/all",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"cust",
+										"subcategory",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Single",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{customerToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "644393f2b1ee2100bc57247e",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/cust/subcategory/single",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"cust",
+										"subcategory",
+										"single"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "4. Ingredients",
+					"item": [
+						{
+							"name": "Single",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{customerToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6443ca207db7212b85a1db35",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/cust/ingredient/single",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"cust",
+										"ingredient",
+										"single"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "All Copy",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{baseUrl}}/cust/ingredient/all",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"cust",
+										"ingredient",
+										"all"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "5. City",
+					"item": [
+						{
+							"name": "Single",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{customerToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6443ccf8f1073ee8d839e87c",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/cust/city/single",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"cust",
+										"city",
+										"single"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "All Copy 2",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{baseUrl}}/cust/city/all",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"cust",
+										"city",
+										"all"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "6. Rest",
+					"item": [
+						{
+							"name": "Single",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{customerToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "644755d3f8a7d1cfade0155d",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/cust/rest/single",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"cust",
+										"rest",
+										"single"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "All Copy 2",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{baseUrl}}/cust/rest/all",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"cust",
+										"rest",
+										"all"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "7. products",
+					"item": [
+						{
+							"name": "Single",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{customerToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6447a7bb484a1a9203609ae0",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/cust/product/single",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"cust",
+										"product",
+										"single"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "All Copy 2",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{baseUrl}}/cust/product/all",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"cust",
+										"product",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Product From Restaurant",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "restId",
+											"value": "64474e1defa68971c8b2ea94",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/cust/product/all",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"cust",
+										"product",
+										"all"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "8. Order",
+					"item": [
+						{
+							"name": "All",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{customerToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/order/all",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"order",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Single",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{customerToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "626a22f6944654394c0c58e9",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/order/single",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"order",
+										"single"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{customerToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "productId",
+											"value": "6279f169e5220ffe33c43d82",
+											"type": "text"
+										},
+										{
+											"key": "userId",
+											"value": "6279eb904393de4b1176f81a",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "hno 4 adarsh nagrar, Jalandhar",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/order/add",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"order",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cancel Order",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{customerToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "orderStatus",
+											"value": "5",
+											"type": "text"
+										},
+										{
+											"key": "_id",
+											"value": "6274cb23b441c37fa6c33267",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/order/update",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"order",
+										"update"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Rest",
+			"item": [
+				{
+					"name": "1.Auth",
+					"item": [
+						{
+							"name": "Login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "tasty@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/cust/user/login",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"cust",
+										"user",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Register",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "tandori@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Daman",
+											"type": "text"
+										},
+										{
+											"key": "userType",
+											"value": "3",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/cust/user/addrest",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"cust",
+										"user",
+										"addrest"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "2. Rest Infomation",
+					"item": [
+						{
+							"name": "Add Rest Information",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"pm.test(\"Response time is less than 400ms\", function (){",
+											"    pm.expect(pm.response.responseTime).to.be.below(400);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{restToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "detail",
+											"value": "My Restaurant ",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "TASTY POINT",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "9988776655",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "Jalandhar",
+											"type": "text"
+										},
+										{
+											"key": "cityId",
+											"value": "6443ccf8f1073ee8d839e87c",
+											"type": "text"
+										},
+										{
+											"key": "userId",
+											"value": "644676a5eb36233507397586",
+											"type": "text"
+										},
+										{
+											"key": "rest_image",
+											"type": "file",
+											"src": "/C:/Users/DELL/Desktop/0 ZEPJsASfB2z7hi_0.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/rest/add",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"rest",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "All",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{restToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{baseUrl}}/rest/all",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"rest",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "All Approved / Pending / Rejected",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{restToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "isApproved",
+											"value": "true",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "isRejected",
+											"value": "true",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "isUsed",
+											"value": "false",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/rest/all",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"rest",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Single",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{restToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "64474e1defa68971c8b2ea94",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/rest/single",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"rest",
+										"single"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "3. Add menu Item",
+					"item": [
+						{
+							"name": "Add",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{restToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Veg Classic Pizza3",
+											"type": "text"
+										},
+										{
+											"key": "product_image",
+											"type": "file",
+											"src": "/C:/Users/DELL/Desktop/0 ZEPJsASfB2z7hi_0.png"
+										},
+										{
+											"key": "categoryId",
+											"value": "6443939db1ee2100bc572474",
+											"type": "text"
+										},
+										{
+											"key": "subcategoryId",
+											"value": "644393f2b1ee2100bc57247e",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "148",
+											"type": "text"
+										},
+										{
+											"key": "ingredients",
+											"value": "[]",
+											"type": "text"
+										},
+										{
+											"key": "detail",
+											"value": "Sweet corn/diced tomato with cheese.",
+											"type": "text"
+										},
+										{
+											"key": "basicIngredients",
+											"value": "Pizza Base, corns, Tomato, Salt",
+											"type": "text"
+										},
+										{
+											"key": "userId",
+											"value": "644676a5eb36233507397586",
+											"type": "text"
+										},
+										{
+											"key": "restId",
+											"value": "64474e1defa68971c8b2ea94",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/rest/pro/add",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"rest",
+										"pro",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "All Menu",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{restToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{baseUrl}}/rest/pro/all",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"rest",
+										"pro",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Single Menu",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{restToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "_id",
+											"value": "6447a7bb484a1a9203609ae0",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/rest/pro/single",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"rest",
+										"pro",
+										"single"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
