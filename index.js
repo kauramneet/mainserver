@@ -14,7 +14,7 @@ app.use(express.static(__dirname + '/server/public/'));
 app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ limit: "50mb", extended: false, parameterLimit: 500000000 }));
 app.get('/', (req, res) => {
-    res.send('Welcome to Gym Server')
+    res.send('Welcome to Food Order Server')
 })
 
 app.use('/rest', restRoutes)
